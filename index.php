@@ -3,8 +3,7 @@
 libxml_use_internal_errors(true);
 
 include_once("functions.php");
-
-var_dump(get_all_menus());
+echo get_current_menu();
 
 
 

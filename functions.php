@@ -27,6 +27,9 @@ function read_links_from_url($link, $constraint, $in_href){
 	return $links;
 }
 
+/**
+ * Function to parse all the menus from the webpage
+ */
 function get_all_menus(){
 	$menu=array();
 	$links_for_restaurant_per_month = read_links_from_url("https://www.uoi.gr/tag/menou-lesxis/", "πρόγραμμα σίτισης", False);
@@ -35,5 +38,27 @@ function get_all_menus(){
 		$menu = array_merge($menu, $menu_docs);
 	}
 	return $menu;
+}
+
+/**
+ * function to get the current month's menu
+ */
+function get_current_menu(){
+	$all_menus = get_all_menus();
+	$month = get_month();
+	foreach($all_menus as $menu){
+		if(strpos($menu,$month)!==False){
+			return $menu;
+		}
+	}
+	return False;
+}
+/**
+ * Function to get a string to compare to the menu link based on the current month 
+ */
+function get_month(){
+	$months = array('ianouar', 'fevroy', 'mart', 'april', 'mai', 'ioyni', 'ioyli','aug', 'septemv', 'okto', 'noem', 'dekem');	
+	$month = date("m");
+	return $months[$month-1];
 }
 ?>
