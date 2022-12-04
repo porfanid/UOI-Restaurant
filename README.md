@@ -14,7 +14,7 @@ The python version is complete and can be used to read the current month's menu.
 
 ### PHP version
 
-The php version is not ready yet, however it is much easier to use as it is actually being hosted in my university student account. Therefore, all you need to do is make an http request to the url: `https://www.cse.uoi.gr/~cse74134/restaurant/index.php`
+The php version is not ready yet, however it is much easier to use as it is actually being hosted in my university student account. Therefore, all you need to do is make an http request to the url: `[https://www.cse.uoi.gr/~cse74134/restaurant/index.php](https://www.cse.uoi.gr/~cse74134/restaurant/index.php)`
 
 ## How is it working
 
